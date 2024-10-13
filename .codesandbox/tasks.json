@@ -1,0 +1,17 @@
+
+{
+  "setupTasks": [
+    {
+      "name":"Install Dependencies",
+      "command": "npm install nodemon --save-dev"
+    }
+  ],
+
+"tasks":{
+  "start":{
+    "name":"start",
+    "command": "npm run dev",
+    "runAtStart":true
+    }
+  }
+}

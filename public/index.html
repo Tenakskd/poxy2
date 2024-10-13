@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Proxy Server</title>
+    <script>
+        // エンターキーが押されたときまたはGo!ボタンが押されたときにフォームを送信
+        function submitForm(event) {
+            if (event.keyCode === 13 || event.type === "click") { // Enterキーのコードは13、またはGo!ボタンのクリック
+                event.preventDefault();  // デフォルトのフォーム送信動作を無効化
+                const url = document.getElementById("url").value;
+                if (url) {
+                    // Node.jsサーバーの/proxy/にリダイレクト
+                    window.location.href = `/proxy/${encodeURIComponent(url)}`;
+                } else {
+                    alert("URLを入力してください");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>プロキシサーバー</h1>
+
+    <!-- IPアドレスとポート番号の表示 -->
+    <p>プロキシサーバー: 170.106.155.14:1080</p>
+
+    <!-- URL入力欄 -->
+    <form id="proxyForm">
+        <label for="url">アクセスするURLを入力してください:</label>
+        <input type="text" id="url" name="url" placeholder="https://example.com" onkeypress="submitForm(event)">
+        <button type="button" onclick="submitForm(event)">Go!</button>
+    </form>
+</body>
+</html>

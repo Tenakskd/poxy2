@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Proxy Server</title>
+    <title>Server.js index.html app.js app.jsonプログラミング言語解説！</title>
     <script>
         // エンターキーが押されたときまたはGo!ボタンが押されたときにフォームを送信
         function submitForm(event) {
@@ -21,14 +21,13 @@
     </script>
 </head>
 <body>
-    <h1>プロキシサーバー</h1>
+    <h1>こんにちは
+自作proxyです。上手くいかないかもしれないけど大体はいけると思います！</h1>
 
-    <!-- IPアドレスとポート番号の表示 -->
-    <p>プロキシサーバー: 170.106.155.14:1080</p>
 
     <!-- URL入力欄 -->
     <form id="proxyForm">
-        <label for="url">アクセスするURLを入力してください:</label>
+        <label for="url">URL</label>
         <input type="text" id="url" name="url" placeholder="https://example.com" onkeypress="submitForm(event)">
         <button type="button" onclick="submitForm(event)">Go!</button>
     </form>
